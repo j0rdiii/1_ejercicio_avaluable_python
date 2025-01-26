@@ -1,5 +1,4 @@
 import re
-import time
 
 #Ejercicio 1
 cuadrados = [x**2 for x in range(10)]
@@ -17,21 +16,8 @@ def fibonacci():
         yield a
         a, b = b, a + b
 fib = fibonacci()
-for _ in range(100):
+for _ in range(10):
     print(next(fib))
-
-#Ejercicio 4
-def temporizador(func):
-    def envoltura():
-        inicio = time.time()
-        func()
-        fin = time.time()
-        print(f"Tiempo de ejecución: {fin - inicio} segundos")
-    return envoltura
-@temporizador
-def funcion_demorada():
-    time.sleep(2)
-funcion_demorada()
 
 #Ejercicio 5
 try:
