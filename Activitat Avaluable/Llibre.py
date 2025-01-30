@@ -7,11 +7,12 @@ class Llibre:
         self.estanteria = estanteria
         self.fila = fila
 
-
+    # Define como se mostrará un libro cuando se crea
+    # Se usa el operador ternario, para mostrar el estado del prestamo
     def __str__(self):
-        return(f"Nom: {self.titol}, Autor: {self.autor}, Pàgines: {self.num_pag}, "
-               f"En Préstec: {'{Sí' if self.en_prestec else 'No'}, "
-               f"Estanteria: {self.estanteria}, Fila: {self.fila}")
+        return (f"Nom: {self.titol}, Autor: {self.autor}, Pàgines: {self.num_pag}, "
+                f"En Préstec: {'Sí' if self.en_prestec else 'No'}, "
+                f"Estanteria: {self.estanteria}, Fila: {self.fila}")
 
 
 def mostrar_menu():
@@ -107,6 +108,7 @@ def main():
             break
         else:
             print("Opció no válida.")
+
 
 if __name__ == "__main__":
     main()
