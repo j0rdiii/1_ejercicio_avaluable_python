@@ -62,7 +62,7 @@ def eliminar_llibre_estanteria_fila(inventari):
 def mostrar_llibre_titol(inventari):
     nom = input("Títol del llibre: ")
     for llibre in inventari:
-        if llibre.nom == nom:
+        if llibre.titol == nom:
             print(llibre)
             return
     print("No s'ha trobat cap llibre amb aquest nom.")
